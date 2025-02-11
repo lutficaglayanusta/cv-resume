@@ -5,7 +5,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1250px;
+    max-width: 1300px;
 }
 
 .header .navbar ul{
@@ -15,10 +15,11 @@ body{
 }
 .header .navbar ul li{
     font-size: 18px;
+    
 }
 .header .navbar ul li a{
     text-decoration: none;
-    color: black;
+    color: #6c757d;
 }
 .header .container .link{
     text-decoration: none;
@@ -43,6 +44,7 @@ body{
 .about-info p{
     margin: 0 auto;
     text-align: center;
+    color: #6c757d;
     font-size: 20px;
     line-height: 1.9rem;
     width: 90%;
