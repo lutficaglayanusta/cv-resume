@@ -1,78 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./style.css" />
-    <title>Personal site</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <a href="#" class="link">@lutficaglayanustaa</a>
-        <nav class="navbar">
-          <ul class="">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Carter | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">AC</a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="cta-button">Contact</a></li>
+            </ul>
         </nav>
-      </div>
     </header>
-    <main>
-      <section id="about" class="about-info">
-        
-          <img src="./dgfdg.jpg" width="300px" alt="cv image">
-        <h1>About Lütfi Çağlayan Usta</h1>
-        <p>
-          Hi, I’m Lütfi Çağlayan Usta 🎥👩‍💻 I’m a software engineer passionate about technology, coding, and sharing the career journey. On my YouTube channel, imjenncho, I explore the intersection of lifestyle and tech, sharing insights into software engineering, personal projects, and the importance of maintaining a balanced life. Work-life balance is a strong value of mine, and through my channel, I aim to show that it’s possible to thrive in your career while making time for other important aspects in your life—whether that’s pursuing hobbies, spending time with friends & family, or just taking a moment to recharge. My goal is to provide transparency into the software engineering career path, spark creativity, and empower others to build a fulfilling career and life they’re passionate about. Let’s build, learn, and grow together!
-        </p>
-      </section>
-       
-       <section id="skills" class="skills-info"> 
-          <h2>Skills</h2>
-          <p>
-            My YouTube channel where I share my journey as a software engineer, combining tech, coding, and lifestyle. From career insights and creative projects to maintaining work-life balance, my content is TestTest designed to inspire and empower you to build a fulfilling career and life you love.
-          </p>
-       </section>
 
-       <section id="contact" class="contact-info">
-         <h2>Contact</h2>
-         <p>
-            For any sponsorship inquiries, click the button below to send me an email.
-         </p>
-         <button>Contact Me</button>
-       </section> 
-    </main>
-    <footer class="footer">
-      <ul>
-        <li>
-          <i class="fab fa-instagram fa-2x"></i>
-        </li>
-        <li>
-          <i class="fab fa-youtube fa-2x"></i>
-        </li>
-        <li>
-          <i class="fab fa-tiktok fa-2x"></i>
-        </li>
-      </ul>
-      <p>
-        © 2025 Lütfi Çağlayan Usta LLC. All rights reserved.
-      </p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Alex Carter<br>Full-Stack Developer</h1>
+            <p>Creating immersive digital experiences with cutting-edge technology and innovative design.</p>
+            <a href="#projects" class="cta-button pulse">View My Work</a>
+        </div>
+        <div class="hero-visual">
+            <div id="canvas3d"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Innovative Developer with a Passion for Problem Solving</h3>
+                <p>With over 7 years of experience in full-stack development, I specialize in creating high-performance web applications that deliver exceptional user experiences.</p>
+                <p>My approach combines technical expertise with creative problem-solving to build solutions that are not only functional but also visually stunning and intuitive to use.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="projectsCount">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="clientsCount">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="experienceCount">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="coffeeCount">0</div>
+                        <div class="stat-label">Cups of Coffee</div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <h4 class="timeline-title">Junior Developer at TechSolutions</h4>
+                    <p class="timeline-description">Developed and maintained web applications using JavaScript, PHP, and MySQL. Collaborated with senior developers to implement new features.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2020</div>
+                    <h4 class="timeline-title">Frontend Developer at DigitalAgency</h4>
+                    <p class="timeline-description">Led the frontend development team, creating responsive and interactive user interfaces with React and Vue.js.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - Present</div>
+                    <h4 class="timeline-title">Full-Stack Developer | Freelance</h4>
+                    <p class="timeline-description">Working with clients worldwide to build custom web applications, from concept to deployment, using modern technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-js"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Expert</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-react"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Advanced</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Advanced</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Expert</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Expert</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Advanced</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Advanced</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Expert</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Intermediate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Intermediate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Intermediate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <div class="skill-icon"><i class="fab fa-linux"></i></div>
+                    </div>
+                    <div class="skill-card-back">
+                        <div class="skill-level">Advanced</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="certifications-container">
+            <div class="certification-card">
+                <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="AWS Certified" class="certification-image">
+                <div class="certification-content">
+                    <h3 class="certification-title">AWS Certified Developer</h3>
+                    <p class="certification-issuer">Amazon Web Services</p>
+                    <p class="certification-date">Issued: June 2022 - Expires: June 2025</p>
+                    <a href="#" class="certification-link">View Credential</a>
+                </div>
+            </div>
+            <div class="certification-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="React Certification" class="certification-image">
+                <div class="certification-content">
+                    <h3 class="certification-title">Advanced React</h3>
+                    <p class="certification-issuer">Meta (Facebook)</p>
+                    <p class="certification-date">Issued: March 2023 - No Expiration</p>
+                    <a href="#" class="certification-link">View Credential</a>
+                </div>
+            </div>
+            <div class="certification-card">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Node.js Certification" class="certification-image">
+                <div class="certification-content">
+                    <h3 class="certification-title">Node.js Certified Developer</h3>
+                    <p class="certification-issuer">OpenJS Foundation</p>
+                    <p class="certification-date">Issued: January 2023 - Expires: January 2026</p>
+                    <a href="#" class="certification-link">View Credential</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 1" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-description">A full-featured e-commerce solution with payment integration, inventory management, and analytics dashboard.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">MongoDB</span>
+                    </div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 2" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Task Management App</h3>
+                    <p class="project-description">A collaborative task management application with real-time updates, team features, and productivity analytics.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Vue.js</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">WebSockets</span>
+                    </div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 3" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Health & Fitness Tracker</h3>
+                    <p class="project-description">A comprehensive health tracking application with workout plans, nutrition logging, and progress visualization.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React Native</span>
+                        <span class="project-tag">GraphQL</span>
+                        <span class="project-tag">D3.js</span>
+                    </div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 4" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Portfolio CMS</h3>
+                    <p class="project-description">A customizable content management system designed specifically for creative professionals to showcase their work.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">Strapi</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                    </div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 5" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Online Learning Platform</h3>
+                    <p class="project-description">An interactive e-learning platform with video courses, quizzes, and certification capabilities.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Angular</span>
+                        <span class="project-tag">NestJS</span>
+                        <span class="project-tag">PostgreSQL</span>
+                    </div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 6" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Social Media Dashboard</h3>
+                    <p class="project-description">A unified dashboard for managing multiple social media accounts with scheduling and analytics features.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">Express</span>
+                        <span class="project-tag">Redis</span>
+                    </div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p class="testimonial-text">Alex transformed our outdated web platform into a modern, high-performance application that has significantly improved our customer experience and increased conversions by 35%. His attention to detail and problem-solving skills are exceptional.</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO, TechInnovate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Working with Alex was a game-changer for our startup. He not only delivered a flawless product ahead of schedule but also provided valuable insights that shaped our technical strategy. I would recommend him to anyone looking for a top-tier developer.</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Michael Chen</h4>
+                        <p>Founder, StartupX</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Alex's ability to understand complex requirements and translate them into elegant solutions is remarkable. He's our go-to developer for all critical projects, consistently delivering beyond expectations.</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Emily Rodriguez</h4>
+                        <p>CTO, DigitalAgency</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-logo">AC</div>
+            <p class="footer-text">Interested in working together or have a project in mind? I'd love to hear from you!</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <p class="copyright">© 2023 Alex Carter. All rights reserved.</p>
+        </div>
     </footer>
-  </body>
+
+
+    <script src="./script.js"></script>
+</body>
 </html>
